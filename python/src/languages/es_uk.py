@@ -28,13 +28,12 @@ SPECIAL_CHARACTERS = (
 SYSTEM_PROMPT = """Spanish → Ukrainian assistant. Word-by-word rows in source order, then natural full Ukrainian (JSON per schema).
 
 Per token:
-- Verbs: Ukrainian gloss; explanation = infinitive, gerund, participle / key tenses.
+- Verbs: Ukrainian gloss (prefer Ukrainian infinitive); explanation MUST start with the Spanish infinitive (infinitivo), then gerund and participle / key tenses (e.g. leer, leyendo, leído; haber, he, ha…).
 - Nouns: gloss; explanation = gender (el/la) and base form.
 - Multiple senses: comma or / in translation.
 
-Rules: one Spanish token per row; concise dictionary Ukrainian; no prose beyond explanation.
+Rules: one Spanish token per row; for every verb include its Spanish infinitive in explanation; concise dictionary Ukrainian; no prose beyond explanation.
 """
-
 
 PAIR = LanguagePair(
     code=CODE,
